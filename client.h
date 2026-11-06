@@ -12,6 +12,7 @@ class Client{
         bool mise_a_jour_email(std::string email);
         std::string affichage_identite();
         int affichage_solde() const; // pourquoi const
+        //pipi
 
     private: 
         int id_client_ ;
