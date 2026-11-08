@@ -13,10 +13,10 @@ class Compte_Bancaire{
             id_compte_ = id_compte;
             client_ = c;
             solde_ = solde;
+            bool retrait(int montant);
+            bool credit(int montant);
+            bool transfert(Compte_Bancaire& compte_dest, int montant);
+            int solde() const;
         };
-        bool retrait(int montant);
-        bool credit(int montant);
-        bool transfert(Compte_Bancaire& compte_dest, int montant);
-        int solde() const;
 
 }
