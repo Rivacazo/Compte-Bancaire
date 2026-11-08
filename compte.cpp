@@ -2,13 +2,10 @@
 #include <iostream>
 
 
-Compte_Bancaire::Compte_Bancaire(int id_compte, client c, int solde){
-    id_compte_ = id_compte;
-    client_ = c;
-    solde_ = solde;
-}
+Compte_Bancaire::Compte_Bancaire(int id_compte, Client c, int solde) : 
+    id_compte_(id_compte), client_(c), solde_(solde){}
 
-int Compte_Bancaire::solde(){
+int Compte_Bancaire::solde() const{
     return solde_;
 }
 
