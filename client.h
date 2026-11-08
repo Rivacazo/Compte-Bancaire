@@ -7,11 +7,11 @@
 class Client{
 
     public:
-        bool mise_a_jour_identite(std::string nom_client,
-                                    std::string prenom_client);
-        bool mise_a_jour_email(std::string email);
-        std::string affichage_identite();
-        int affichage_solde() const; // pourquoi const
+        bool mise_a_jour_identite();
+        bool mise_a_jour_email();
+        void affichage_identite() const;
+        int affichage_solde() const; // pourquoi const ; le const signifie que cette méthode ne modifiera aucun attribut de Client
+        Client(int id_client, int solde, std::string nom_client, std::string prenom_client, std::string email, std::string tel, std::string adresse);
 
     private: 
         int id_client_ ;
@@ -21,6 +21,8 @@ class Client{
         std::string email_;
         std::string tel_ ;
         std::string adresse_ ;
-}
+};
 
-// difference netre fonctions et methodes
+#endif
+
+// difference entre fonctions et methodes
